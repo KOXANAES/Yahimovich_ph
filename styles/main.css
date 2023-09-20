@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+  }
+body { 
+    background-image: url(../materials/background-objective-half.png);
+    background-repeat: no-repeat;
+    background-size: 400px;
+    background-color: rgb(227, 227, 227);
+}
+
+/* все стили хедера */
+
+header {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* левая часть */ 
+
+.header__logo {
+    
+    display: block;
+
+    flex:50%;
+    max-width: 50%;
+}
+.header__nav__name {
+    display: block;
+    color: rgb(64, 64, 64);
+    text-transform: uppercase;
+    font-size: 3.5vh;
+    margin-left: 40%;
+    margin-top: 20vh;
+}
+.header__nav__description { 
+    color: rgb(80, 80, 80);
+    padding-top: 5vw;
+    margin-left: 22vw;
+    font-size: 3.5vh;
+    text-wrap: nowrap;
+}
+
+/* правая часть */ 
+
+.header__nav {
+    display: block;
+    flex: 50%;
+    max-width: 50%;
+    margin-top: 13vh;
+    
+}
+.header__logo__elements {
+    display: block;
+    text-wrap: nowrap;
+    font-size: 4.5vh;
+    margin-left: 25vw;
+    padding: 10px;
+    margin-left: 25vw;
+    -webkit-transition: 0.5s;
+}
+.header__logo__elements a {
+    text-decoration: none;
+    color: rgb(74, 74, 74);
+}
+.header__logo__elements:hover { 
+    font-size: 3em;
+    transition: 0.5s;
+}
+#see__gallery {
+    flex:100%;
+    width:100%;
+    display: block;
+    text-align: center;
+    color: rgb(74, 74, 74);
+    padding: 100px 0px 100px 0px;
+    text-transform: uppercase;
+    text-wrap: nowrap;
+}
+@media only screen and (max-width: 800px) {
+    .header__nav__name, .header__nav__description, .header__logo__elements a { 
+        color: white;
+    }
+    .header__nav {
+        flex:100%;
+        max-width: 100%;
+        text-align: center;
+    }
+    .header__nav__name {
+        text-align: center;
+    }
+    .header__logo__elements { 
+        margin: 0;
+    }
+}
+
+/* все стили самой галереи */
+
+.gallery { 
+    display: flex;
+    flex-wrap: wrap;
+}
+.gallery__col { 
+    flex:25%;
+    max-width: 25%;
+}
+.gallery__col__img { 
+    vertical-align: middle;
+    width: 100%;
+    padding: 10px;
+    -webkit-transition: 1s;
+}
+.gallery__col__img:hover { 
+    transform: scale(1.1);
+    transition: 1s;
+    box-shadow: 5px 5px 5px solid black;
+}
+
+
+
+@media only screen and (max-width:900px) {
+    .gallery__col {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+@media only screen and (max-width:600px) {
+    .gallery__col {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
